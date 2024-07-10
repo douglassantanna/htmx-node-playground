@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Weather Example</title>
+</head>
+<body class="bg-blue-900 text-white min-h-screen flex items-center justify-center text-center p-10">
+  <div>
+    <h1 class="text-xl mb-4">Weather in Dublin</h1>
+    <p class="text-5xl">
+      <span hx-get="/get-temp" hx-trigger="every 2s">
+        Loading...
+      </span>
+    </p>
+    <div class="mt-4">
+      <a href="/" class="bg-green-500 text-white px-4 py-2 rounded">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

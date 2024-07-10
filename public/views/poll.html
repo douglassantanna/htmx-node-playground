@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Polling Example</title>
+</head>
+<body class="bg-gray-100 text-center p-10">
+  <h1 class="text-3xl mb-6">Polling Example</h1>
+  <div class="text-center">
+    <span hx-get="/polling" hx-trigger="every 1s">
+      Loading...
+    </span>
+  </div>
+  <div class="mt-4">
+    <a href="/" class="bg-blue-500 text-white px-4 py-2 rounded">Back to Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>HTMX Booking</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="text-2xl font-bold my-5">
+            Simple request example
+        </h1>
+        <div class="mb-4" hx-target="this" hx-swap="outerHTML">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email"
+              >Email Address</label
+            >
+            <input
+              name="email"
+              hx-post="/contact/email"
+              class="border rounded-lg py-2 px-3 w-full focus:outline-none focus:border-blue-500"
+              type="email"
+              id="email"
+              placeholder="Type any email"
+              required
+            />
+          </div>
+
+        <span class="htmx-indicator" id="loading">
+            <img src="img/loader.gif" alt="Loading..." class="m-auto h-10">
+        </span>
+
+        <div id="users"></div>
+        <div class="mt-4">
+            <a href="/" class="bg-blue-500 text-white px-4 py-2 rounded">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
